@@ -53,7 +53,7 @@ Looker Studio funciona mejor cuando la fuente de datos está limpia y preparada.
         *   `Precio_Unitario` e `Ingreso_Transaccion` tengan el tipo `Number` o `Currency`.
         *   `Fecha_Hora` tenga el tipo `Date & Time`.
         *   `Cantidad` sea de tipo `Number`.
-    > ![Placeholder para Imagen 2.1: Captura de pantalla del panel de Datos en Looker Studio, mostrando los campos y sus tipos de datos (Fecha, Texto, Número).]
+  
 
 #### **Fase 3: Construcción del Dashboard Operacional**
 
