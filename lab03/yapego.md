@@ -21,7 +21,7 @@
 
 *   **Herramientas y Datos:**
     *   **Software:** Una cuenta de Google (para Google Sheets y Looker Studio).
-    *   **Dataset:** `recargas_yapego_sucio.csv`. [**📥 Descarga el archivo aquí**](https://gist.githubusercontent.com/braulio-arteaga/9f38c3327d420f865f576e3381e4b868/raw/c26b7189f783109a962a938c4710178fc3ef995a/recargas_yapego_sucio.csv).
+    *   **Dataset:** `recargas_yapego_sucio.csv`. [**📥 Descarga el archivo aquí**](https://github.com/gdiazes/sgd/blob/main/lab03/recargas_yapego_sucio.csv).
         *(Este CSV contiene 1000 registros con los problemas de calidad descritos en el caso)*.
 
 *   **Procedimiento y Tareas a Desarrollar:**
