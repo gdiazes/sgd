@@ -1,6 +1,6 @@
 ### **Guía de Laboratorio: Diseño del Esquema de Base de Datos para "FrutiFresh Lealtad"**
 
-#### **🏛️ Marco Conceptual**
+#### ** Marco Conceptual**
 
 El modelado de datos es el proceso de traducir los requisitos de un negocio en una estructura de base de datos técnica, eficiente y escalable. En este desafío, actuarás como el **Arquitecto de Datos** de la startup "FrutiFresh". Tu tarea es diseñar y crear el esquema físico de la base de datos para su nuevo "Programa de Lealtad", escribiendo el script SQL completo que dará vida al sistema.
 
