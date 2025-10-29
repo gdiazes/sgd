@@ -10,7 +10,7 @@ El Gerente de Operaciones de AndesHarvest quiere crear el primer "Reporte de Pro
 
 Te han entregado una tabla temporal llamada `cosecha_mensual_crudo` que contiene los datos en bruto. Tu misión como Analista de Datos es **diagnosticar los problemas de calidad, escribir un script SQL para limpiar los datos y producir una tabla final, `cosecha_mensual_limpia`, que sea 100% confiable** para el análisis gerencial.
 
-#### ** Objetivos del Laboratorio**
+#### **Objetivos del Laboratorio**
 
 1.  **Perfilar** un conjunto de datos utilizando consultas de agregación SQL para identificar problemas de calidad (nulos, duplicados, inconsistencias, outliers).
 2.  Escribir sentencias `UPDATE` y `DELETE` para **corregir y estandarizar** los datos.
