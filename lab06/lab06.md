@@ -1,6 +1,6 @@
 ### **Guía de Laboratorio 06: Preparando los Datos para el Primer Reporte de Productividad de AndesHarvest**
 
-#### ** Marco Conceptual**
+#### **Marco Conceptual**
 
 En el mundo real, los datos rara vez llegan limpios. Antes de que se pueda realizar cualquier análisis de negocio significativo, un analista o ingeniero de datos debe realizar un proceso de **limpieza y preparación de datos** (también conocido como Data Wrangling). Este proceso implica auditar los datos para identificar problemas de calidad (perfilado), aplicar transformaciones para corregirlos y verificar que el conjunto de datos resultante sea confiable. En este laboratorio, seguirás este proceso sistemático para transformar un conjunto de datos crudos y "sucios" en un activo de información listo para el análisis.
 
