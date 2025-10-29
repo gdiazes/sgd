@@ -4,7 +4,7 @@
 
 En el mundo real, los datos rara vez llegan limpios. Antes de que se pueda realizar cualquier análisis de negocio significativo, un analista o ingeniero de datos debe realizar un proceso de **limpieza y preparación de datos** (también conocido como Data Wrangling). Este proceso implica auditar los datos para identificar problemas de calidad (perfilado), aplicar transformaciones para corregirlos y verificar que el conjunto de datos resultante sea confiable. En este laboratorio, seguirás este proceso sistemático para transformar un conjunto de datos crudos y "sucios" en un activo de información listo para el análisis.
 
-#### ** Caso de Estudio**
+#### **Caso de Estudio**
 
 El Gerente de Operaciones de AndesHarvest quiere crear el primer "Reporte de Productividad de Cosechadores". El objetivo es calcular los kilos totales cosechados por cada empleado en el último mes. Sin embargo, al intentar ejecutar un primer análisis, los resultados son absurdos: aparecen empleados sin nombre, kilos negativos y totales inflados.
 
@@ -17,7 +17,7 @@ Te han entregado una tabla temporal llamada `cosecha_mensual_crudo` que contiene
 3.  Utilizar técnicas de `GROUP BY` y `window functions` (opcional) para **identificar y eliminar duplicados**.
 4.  Crear una nueva tabla limpia a partir de la tabla sucia, demostrando un proceso de transformación de datos repetible.
 
-#### ** Herramientas y Entorno**
+#### **Herramientas y Entorno**
 *   Docker, PostgreSQL y DBeaver.
 *   El contenedor de base de datos debe estar en ejecución.
 
