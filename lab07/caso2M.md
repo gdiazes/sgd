@@ -1,16 +1,16 @@
 ### **Guía de Laboratorio 07: Desafío de Optimización - El Reporte Lento de AndesHarvest**
 
-#### ** Marco Conceptual**
+#### **Marco Conceptual**
 
 La eficiencia de una base de datos no depende solo de la potencia del hardware, sino fundamentalmente de su **estrategia de acceso a los datos**. En tablas con millones de filas, una consulta mal optimizada puede tardar minutos u horas, mientras que la misma consulta, bien optimizada con un índice, puede ejecutarse en milisegundos. En este laboratorio, actuarás como un **Ingeniero de Rendimiento de Datos (Database Performance Engineer)**. Tu misión es diagnosticar una consulta lenta utilizando la herramienta `EXPLAIN ANALYZE`, implementar la solución (un índice) y medir el impacto dramático de tu optimización.
 
-#### ** Caso de Estudio**
+#### **Caso de Estudio**
 
 "AndesHarvest Export" ha estado operando exitosamente por más de un año y su tabla `Registros_Cosecha` ahora contiene **más de 2 millones de registros**. El Gerente de RRHH necesita urgentemente un reporte para calcular las bonificaciones de fin de año. Su petición es simple: **"Necesito ver todos los registros de cosecha de la empleada Ana Solis (ID 'E-045') para auditar su producción"**.
 
 El equipo de desarrollo ha ejecutado la consulta `SELECT * FROM Registros_Cosecha WHERE id_empleado = 'E-045';` pero la aplicación se congela y la consulta nunca parece terminar. Te han llamado a ti, el experto, para solucionar el problema.
 
-#### ** Objetivos del Laboratorio**
+#### **Objetivos del Laboratorio**
 
 1.  Trabajar con un volumen de datos significativo para simular un escenario de rendimiento realista.
 2.  Utilizar `EXPLAIN ANALYZE` para diagnosticar el plan de ejecución de una consulta lenta e identificar un **Escaneo Secuencial (Seq Scan)**.
@@ -18,7 +18,7 @@ El equipo de desarrollo ha ejecutado la consulta `SELECT * FROM Registros_Cosech
 4.  Volver a ejecutar `EXPLAIN ANALYZE` para verificar que la consulta ahora utiliza un **Escaneo de Índice (Index Scan)**.
 5.  Cuantificar y comunicar la mejora en el rendimiento (en términos de tiempo de ejecución) lograda por la optimización.
 
-#### ** Herramientas y Entorno**
+#### **Herramientas y Entorno**
 *   PostgreSQL y DBeaver.
 
 
