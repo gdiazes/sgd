@@ -26,7 +26,7 @@ Tu misión es tomar el rol de DBA/Ingeniero de Datos, diagnosticar cada uno de e
 *   PostgreSQL y DBeaver.
   
 
----
+
 
 ### **Procedimiento del Desafío**
 
@@ -65,7 +65,7 @@ Tu misión es tomar el rol de DBA/Ingeniero de Datos, diagnosticar cada uno de e
     ```
 3.  Verifica el tamaño de la tabla con `SELECT COUNT(*) FROM clientes_lealtad;`.
 
----
+
 
 #### **Fase 2: Desafío 1 - El Filtro de Nombre y Apellido (~45 min)**
 
@@ -94,7 +94,7 @@ Tu misión es tomar el rol de DBA/Ingeniero de Datos, diagnosticar cada uno de e
 5.  **Verificación Final:** Ejecuta el `EXPLAIN ANALYZE` por última vez.
     *   **Observa:** El plan ahora debería usar un `Index Scan` sobre `idx_clientes_nombre_apellido`. El tiempo de ejecución debería ser de **sub-milisegundos**. ¡Problema resuelto!
 
----
+
 
 #### **Fase 3: Desafío 2 - La Búsqueda por Email (~45 min)**
 
@@ -114,7 +114,7 @@ Tu misión es tomar el rol de DBA/Ingeniero de Datos, diagnosticar cada uno de e
 3.  **Verificación:** Vuelve a ejecutar el `EXPLAIN ANALYZE` de este desafío.
     *   **Observa:** El plan ahora usará un `Index Scan` sobre nuestro nuevo índice `idx_clientes_email_lower`. La consulta será casi instantánea.
 
----
+
 
 #### **Fase 4: Desafío 3 - El Gráfico de Registros por Mes (~45 min)**
 
@@ -135,7 +135,7 @@ Tu misión es tomar el rol de DBA/Ingeniero de Datos, diagnosticar cada uno de e
 3.  **Verificación:** Ejecuta el `EXPLAIN ANALYZE` de nuevo.
     *   **Observa:** El plan de ejecución cambiará. En lugar de un `Seq Scan` seguido de un `GroupAggregate`, PostgreSQL puede usar una estrategia mucho más rápida que lee los datos ya agrupados directamente desde el índice (`Index Only Scan` o similar), evitando leer la tabla principal por completo. La mejora en el rendimiento será muy significativa.
 
----
+
 
 ### **Entregable**
 
@@ -147,7 +147,7 @@ Un único archivo de texto (`reporte_optimizacion_avanzado.txt`) que contenga:
     *   Una línea resumiendo el cambio en el tiempo de ejecución.
 2.  **Una sección final de "Conclusiones"** donde expliques brevemente en tus propias palabras la diferencia entre un índice simple, un índice compuesto y un índice funcional.
 
----
+
 
 ### **Rúbrica de Evaluación (10 Puntos)**
 
