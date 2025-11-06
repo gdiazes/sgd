@@ -23,8 +23,8 @@ Tu misión es tomar el rol de DBA/Ingeniero de Datos, diagnosticar cada uno de e
 4.  Comprender cómo los índices pueden acelerar operaciones de agregación (`GROUP BY`) sobre funciones de fecha.
 
 #### **Herramientas y Entorno**
-*   Docker, PostgreSQL y DBeaver.
-*   El contenedor de base de datos debe estar en ejecución.
+*   PostgreSQL y DBeaver.
+  
 
 ---
 
