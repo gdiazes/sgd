@@ -2,7 +2,7 @@
 
 #### **Marco Conceptual**
 
-En los laboratorios anteriores, hemos trabajado con bases de datos locales utilizando Docker. Si bien es excelente para el desarrollo, las aplicaciones del mundo real se despliegan en la nube para aprovechar su escalabilidad, disponibilidad y gestión simplificada. En este laboratorio, darás el salto de desarrollador a ingeniero de DevOps/Cloud. Tu misión es aprovisionar una base de datos PostgreSQL de grado empresarial utilizando un servicio PaaS (Plataforma como Servicio) en Google Cloud Platform (GCP), específicamente **Cloud SQL**. Luego, te conectarás a esta base de datos remota y desplegarás el esquema que diseñaste, llevando tu trabajo del entorno local al mundo real.
+En los laboratorios anteriores, hemos trabajado con bases de datos. Si bien es excelente para el desarrollo, las aplicaciones del mundo real se despliegan en la nube para aprovechar su escalabilidad, disponibilidad y gestión simplificada. En este laboratorio, darás el salto de desarrollador a ingeniero de DevOps/Cloud. Tu misión es aprovisionar una base de datos PostgreSQL de grado empresarial utilizando un servicio PaaS (Plataforma como Servicio) en Google Cloud Platform (GCP), específicamente **Cloud SQL**. Luego, te conectarás a esta base de datos remota y desplegarás el esquema que diseñaste, llevando tu trabajo del entorno local al mundo real.
 
 #### **Caso de Estudio**
 
