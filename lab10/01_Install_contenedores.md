@@ -62,15 +62,17 @@ Abre una nueva terminal (después de haber vuelto a iniciar sesión) y verifica 
     ```bash
     docker run hello-world
     ```
-    ```bash    
+
+    
+ ```bash  
 sudo groupadd docker
 ```
-    ```bash
+```bash
 sudo usermod -aG docker $USER
 ```
- ```bash    
+```bash    
 newgrp docker
 ```
- ```bash    
+```bash    
 docker run hello-world
 ```
