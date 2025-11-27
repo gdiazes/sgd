@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:8.0  # Usar una versión específica es más seguro que 'latest'
+    container_name: mysql_server
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password_root_secreta  # Contraseña para el usuario root
+      MYSQL_DATABASE: nombre_base_datos           # (Opcional) Crea una DB al iniciar
+      MYSQL_USER: usuario_app                     # (Opcional) Crea un usuario extra
+      MYSQL_PASSWORD: Tecsup00            # (Opcional) Contraseña del usuario extra
+    ports:
+      - "3306:3306"  # Mapea puerto host:contenedor
+    volumes:
+      - mysql_data:/var/lib/mysql  # Persistencia de datos
+
+volumes:
+  mysql_data:  # Define el volumen para que los datos no se 
