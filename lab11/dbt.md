@@ -39,7 +39,7 @@ Vamos a usar `docker-compose` para levantar nuestra base de datos y un contenedo
     version: '3.8'
     services:
       postgres_db:
-        image: postgres:13
+        image: postgres:15.15-trixie
         container_name: dbt-postgres
         environment:
           - POSTGRES_USER=dbt_user
