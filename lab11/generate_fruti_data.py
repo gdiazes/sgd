@@ -22,7 +22,7 @@ def generate_products():
         [400, 'Lechuga', 'Verduras', 0.50],
         [401, 'Tomate', 'Verduras', 0.90]
     ]
-
+    
     with open(PATH_PRODUCTS, 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['product_id', 'product_name', 'category', 'price'])
@@ -30,34 +30,34 @@ def generate_products():
 
 def generate_sales():
     print(f"Generando {PATH_SALES} con 1000 registros...")
-
+    
     valid_product_ids = [100, 101, 102, 103, 200, 300, 301, 400, 401]
     start_date = datetime(2023, 1, 1)
-
+    
     with open(PATH_SALES, 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['sale_id', 'product_id', 'quantity', 'sale_date'])
-
+        
         for i in range(1, 1001):
             # Datos normales
             sale_id = i
             product_id = random.choice(valid_product_ids)
             quantity = random.randint(1, 50)
             sale_date = start_date + timedelta(days=random.randint(0, 300))
-
+            
             # --- INYECCIÓN DE ERRORES ---
-
+            
             # Error 1: Sale ID Nulo (en el registro #50)
             # Esto fallará el test 'not_null' en sale_id
             if i == 50:
-                sale_id = ''
-
+                sale_id = '' 
+            
             # Error 2: Producto Inexistente (en el registro #100 y #500)
             # Esto fallará el test 'relationships' (Integridad referencial)
             # El producto 9999 no existe en la tabla de productos
             if i in [100, 500]:
                 product_id = 9999
-
+                
             writer.writerow([sale_id, product_id, quantity, sale_date.strftime('%Y-%m-%d')])
 
 if __name__ == '__main__':

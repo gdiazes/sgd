@@ -1,0 +1,6 @@
+# Especifica la versión exacta de dbt-postgres.
+dbt-postgres==1.7.0
+
+# RESTRICCIÓN IMPORTANTE:
+# dbt 1.7 necesita protobuf 4.x. La versión 5.x rompe la compatibilidad.
+protobuf>=4.0.0,<5.0.0

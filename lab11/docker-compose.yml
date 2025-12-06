@@ -1,0 +1,43 @@
+# Define la versión del formato de Docker Compose.
+version: '3.8'
+
+# Define los servicios que componen tu aplicación.
+services:
+  dbt:
+    # Construye la imagen de Docker usando el Dockerfile en el directorio actual (.).
+    build: .
+    # Asigna un nombre específico al contenedor, facilitando su identificación.
+    container_name: dbt_dev_container
+    # Define el directorio de trabajo dentro del contenedor.
+    working_dir: /usr/app/dbt_project
+    # Monta el directorio 'dbt/' de tu máquina local al '/usr/app/dbt_project' dentro del contenedor.
+    volumes:
+      - ./dbt:/usr/app/dbt_project
+    # Permite la interactividad con el contenedor, como usar la terminal.
+    stdin_open: true
+    tty: true
+    # dbt dependerá de que postgres_db esté levantado antes de intentar conectarse.
+    depends_on:
+      - postgres_db
+    # Carga variables de entorno desde el archivo .env.
+    env_file:
+      - .env
+    # Expone puertos si se usan (e.g., para dbt docs serve).
+    ports:
+      - "8080:8080"
+
+  postgres_db: # Servicio de PostgreSQL
+    image: postgres:13 # Usa una imagen oficial de PostgreSQL
+    container_name: your_postgres_instance # Nombre para tu contenedor de DB
+    environment: # Variables de entorno para configurar PostgreSQL
+      POSTGRES_DB: ${DBT_PG_DBNAME}
+      POSTGRES_USER: ${DBT_PG_USER}
+      POSTGRES_PASSWORD: ${DBT_PG_PASSWORD}
+    ports:
+      - "5432:5432" # Expone el puerto 5432 del contenedor al puerto 5432 de tu host
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Persistencia de datos de PostgreSQL
+
+# Define volúmenes nombrados para la persistencia de datos.
+volumes:
+  pgdata:
