@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table "db_dbt"."public"."frutifresh_products" ("product_id" integer,"product_name" text,"category" text,"price" float8)
+  ;
+    -- dbt seed --
+    
+          insert into "db_dbt"."public"."frutifresh_products" ("product_id", "product_name", "category", "price") values
+          (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+      
+
+;
+  

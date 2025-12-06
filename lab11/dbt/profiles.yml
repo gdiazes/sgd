@@ -1,0 +1,25 @@
+# El nombre de este perfil debe coincidir con el valor de 'profile' en dbt_project.yml
+my_dbt_project:
+  target: dev
+
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_PG_HOST') }}"
+      port: "{{ env_var('DBT_PG_PORT') | int }}"
+      user: "{{ env_var('DBT_PG_USER') }}"
+      password: "{{ env_var('DBT_PG_PASSWORD') }}"
+      dbname: "{{ env_var('DBT_PG_DBNAME') }}"
+      schema: public
+      threads: 4
+
+    # Opcional: Configuración para BigQuery
+    # bigquery_dev:
+    #   type: bigquery
+    #   method: service_account
+    #   project: "{{ env_var('DBT_BQ_PROJECT') }}"
+    #   dataset: "{{ env_var('DBT_BQ_DATASET') }}"
+    #   keyfile: "{{ env_var('DBT_BQ_KEYFILE_PATH') }}"
+    #   threads: 4
+    #   timeout_seconds: 300
+    #   priority: interactive

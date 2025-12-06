@@ -1,0 +1,11 @@
+product_id,product_name,category,price
+100,Manzana Royal,Frutas,1.5
+101,Manzana Verde,Frutas,1.6
+102,Naranja Jugo,Frutas,0.8
+103,Mandarina,Frutas,1.0
+200,Pera de Agua,Frutas,2.0
+200,Platano Seda,Frutas,1.2
+300,Uva Italia,Frutas,3.5
+301,Uva Red Globe,Frutas,3.8
+400,Lechuga,Verduras,0.5
+401,Tomate,Verduras,0.9

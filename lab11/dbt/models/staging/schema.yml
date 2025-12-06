@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: "Catálogo de productos de FrutiFresh"
+    columns:
+      - name: product_id
+        tests:
+          - unique      # Atrapará el ID 200 duplicado
+          - not_null
+
+  - name: stg_sales
+    description: "Registro de ventas"
+    columns:
+      - name: sale_id
+        tests:
+          - unique
+          - not_null    # Atrapará la fila #50 (vacía)
+
+      - name: product_id
+        tests:
+          - relationships: # Atrapará las filas #100 y #500 (producto 9999)
+              to: ref('stg_products')
+              field: product_id

@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "db_dbt"."public"."raw_orders";
+    -- dbt seed --
+    
+          insert into "db_dbt"."public"."raw_orders" ("order_id", "customer_id", "order_date", "amount") values
+          (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+      
+
+;
+  

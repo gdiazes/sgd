@@ -1,0 +1,29 @@
+# Nombre de tu proyecto dbt.
+name: 'my_dbt_project'
+
+# Versión de tu proyecto dbt.
+version: '1.0.0'
+
+# Versión compatible de dbt-core.
+require-dbt-version:
+  - ">=1.7.0"
+  - "<1.8.0"
+
+# Rutas donde dbt buscará modelos, semillas, macros, etc.
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Configuración de los perfiles de conexión a la base de datos.
+profile: 'my_dbt_project'
+
+# Configuración general de modelos.
+models:
+  my_dbt_project:
+    materialized: view
+    example:
+      materialized: table
+    staging:
+      materialized: view
