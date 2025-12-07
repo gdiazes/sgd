@@ -36,7 +36,7 @@ Al finalizar la configuración, tu directorio de trabajo `~/app_dbt` deberá luc
 .
 ├── Dockerfile
 ├── README.md
-├── _.env
+├── .env
 ├── dbt
 │   ├── dbt_packages
 │   ├── dbt_project.yml
@@ -364,5 +364,6 @@ Responda en su informe:
 | **Análisis Crítico** | - Documentación desplegada en puerto 8080.<br>- Respuestas a las 4 preguntas demostrando entendimiento del ciclo de vida del dato y limitaciones de las herramientas. | **5** |
 
 **Total: 20 Puntos**
+
 
 
