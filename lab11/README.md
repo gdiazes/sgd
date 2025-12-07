@@ -1,7 +1,3 @@
-Aquí tienes la versión mejorada y completa del manual. Se ha incorporado el **Gráfico del Pipeline** al inicio y la **Estructura de Carpetas** detallada, integrándolos en la narrativa del laboratorio.
-
----
-
 # 📘 Guía de Laboratorio: Ingeniería de Datos Moderna con dbt y Docker
 ## Caso de Estudio: Control de Calidad en "FrutiFresh"
 
@@ -336,3 +332,4 @@ Responda en su informe:
 | **Análisis Crítico** | - Documentación desplegada en puerto 8080.<br>- Respuestas a las 4 preguntas demostrando entendimiento del ciclo de vida del dato y limitaciones de las herramientas. | **5** |
 
 **Total: 20 Puntos**
+
