@@ -33,27 +33,59 @@ graph TD
 Al finalizar la configuración, tu directorio de trabajo `~/app_dbt` deberá lucir exactamente así. Usa esta estructura como referencia para verificar que has creado los archivos en el lugar correcto.
 
 ```text
-/home/estudiante/app_dbt/
-├── .env                        # Credenciales de la Base de Datos (User/Pass)
-├── Dockerfile                  # Receta para construir la imagen de dbt
-├── docker-compose.yml          # Orquestador (dbt + Postgres)
-├── requirements.txt            # Librerías Python (dbt-postgres, protobuf)
-├── generate_fruti_data.py      # Script generador de caos (Python)
-├── dbt/                        # Carpeta montada en el contenedor
-│   ├── dbt_project.yml         # Configuración principal del proyecto
-│   ├── profiles.yml            # Perfil de conexión (Targets)
-│   ├── seeds/                  # Aquí caerán los CSVs generados
-│   │   ├── frutifresh_products.csv
-│   │   └── frutifresh_sales.csv
-│   ├── models/
-│   │   └── staging/            # Aquí va tu lógica SQL y Tests
-│   │       ├── schema.yml      # ¡IMPORTANTE! Aquí se definen los tests
-│   │       ├── stg_products.sql
-│   │       └── stg_sales.sql
-│   ├── tests/
-│   ├── macros/
-│   └── snapshots/
-└── README.md
+.
+├── Dockerfile
+├── README.md
+├── _.env
+├── dbt
+│   ├── dbt_packages
+│   ├── dbt_project.yml
+│   ├── logs
+│   │   └── dbt.log
+│   ├── macros
+│   │   └── custom_macros.sql
+│   ├── models
+│   │   ├── example
+│   │   │   └── my_first_model.sql
+│   │   └── staging
+│   │       ├── orders.sql
+│   │       └── schema.yml
+│   ├── profiles.yml
+│   ├── seeds
+│   │   ├── frutifresh_products.csv
+│   │   ├── frutifresh_sales.csv
+│   │   └── raw_orders.csv
+│   └── target
+│       ├── catalog.json
+│       ├── compiled
+│       │   └── my_dbt_project
+│       │       └── models
+│       │           ├── example
+│       │           │   └── my_first_model.sql
+│       │           └── staging
+│       │               └── orders.sql
+│       ├── graph.gpickle
+│       ├── graph_summary.json
+│       ├── index.html
+│       ├── manifest.json
+│       ├── partial_parse.msgpack
+│       ├── run
+│       │   └── my_dbt_project
+│       │       ├── models
+│       │       │   ├── example
+│       │       │   │   └── my_first_model.sql
+│       │       │   └── staging
+│       │       │       └── orders.sql
+│       │       └── seeds
+│       │           ├── frutifresh_products.csv
+│       │           ├── frutifresh_sales.csv
+│       │           └── raw_orders.csv
+│       ├── run_results.json
+│       └── semantic_manifest.json
+├── docker-compose.yml
+├── generate_fruti_data.py
+├── requirements.txt
+
 ```
 
 ---
@@ -332,4 +364,5 @@ Responda en su informe:
 | **Análisis Crítico** | - Documentación desplegada en puerto 8080.<br>- Respuestas a las 4 preguntas demostrando entendimiento del ciclo de vida del dato y limitaciones de las herramientas. | **5** |
 
 **Total: 20 Puntos**
+
 
