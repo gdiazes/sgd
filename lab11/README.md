@@ -343,7 +343,7 @@ Visite `http://localhost:8080` en su navegador.
 
 ---
 
-### 🧠 Análisis Crítico (Preguntas de Evaluación)
+### 🧠 Preguntas de Evaluación
 
 Responda en su informe:
 
@@ -364,6 +364,7 @@ Responda en su informe:
 | **Análisis Crítico** | - Documentación desplegada en puerto 8080.<br>- Respuestas a las 4 preguntas demostrando entendimiento del ciclo de vida del dato y limitaciones de las herramientas. | **5** |
 
 **Total: 20 Puntos**
+
 
 
 
