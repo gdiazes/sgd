@@ -269,7 +269,7 @@ Cree este archivo en `~/app_dbt/`. Este script genera 1000 ventas, pero inyecta:
 *   Ventas con IDs nulos.
 *   Ventas de productos que no existen.
 
-*(Copie el código Python proporcionado en el ejercicio anterior).*
+
 
 #### 3.2. Ejecutar Generador
 ```bash
@@ -364,6 +364,7 @@ Responda en su informe:
 | **Análisis Crítico** | - Documentación desplegada en puerto 8080.<br>- Respuestas a las 4 preguntas demostrando entendimiento del ciclo de vida del dato y limitaciones de las herramientas. | **5** |
 
 **Total: 20 Puntos**
+
 
 
 
