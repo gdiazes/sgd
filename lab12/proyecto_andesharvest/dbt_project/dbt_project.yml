@@ -1,1 +1,19 @@
 
+name: 'andesharvest_analytics'
+version: '1.0.0'
+profile: 'andesharvest'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+seeds:
+  andesharvest_analytics:
+    raw_cosecha:
+      +schema: raw_data # Carga los seeds en un esquema separado
+
+models:
+  andesharvest_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
