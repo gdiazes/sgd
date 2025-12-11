@@ -1,1 +1,34 @@
 
+version: 2
+
+sources:
+  - name: raw_data
+    schema: raw_data
+    tables:
+      - name: raw_cosecha
+        columns:
+          - name: id_registro
+            tests:
+              - unique
+              - not_null
+
+models:
+  - name: stg_cosecha
+    description: "Tabla de staging con registros de cosecha limpios y estandarizados."
+    tests:
+      - dbt_utils.not_empty_string:
+          column_name: id_parcela_std
+    columns:
+      - name: id_registro
+        tests:
+          - unique
+          - not_null
+      - name: id_empleado
+        tests:
+          - not_null
+      - name: kilos_cosechados
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 50
+              strictly: true
