@@ -1,1 +1,24 @@
 
+services:
+  postgres:
+    image: postgres:15
+    container_name: andesharvest-db
+    environment:
+      POSTGRES_USER: dbt_user
+      POSTGRES_PASSWORD: dbt_password
+      POSTGRES_DB: andesharvest_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.7.0
+    container_name: andesharvest-dbt
+    volumes:
+      - ./dbt_project:/usr/app
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
