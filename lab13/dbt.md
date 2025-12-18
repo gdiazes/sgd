@@ -1,3 +1,6 @@
+
+
+```plaintext
 proyecto_andesharvest/
 ├── dbt_project.yml          # ⚙️ Configuración principal del proyecto
 ├── packages.yml             # 📦 Librerías externas (ej. dbt-utils)
@@ -43,3 +46,4 @@ proyecto_andesharvest/
 │
 └── target/                  # 🚫 (Generado automáticamente, NO tocar)
     └── compiled/            #    SQL compilado
+```
