@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   postgres:
@@ -15,10 +16,15 @@ services:
   dbt:
     image: ghcr.io/dbt-labs/dbt-postgres:1.7.0
     container_name: andesharvest-dbt
+    working_dir: /usr/app
     volumes:
       - ./dbt_project:/usr/app
+      # Descomenta si tienes config local:
+      # - ./profiles.yml:/root/.dbt/profiles.yml
     depends_on:
       - postgres
+    # CORRECCIÓN AQUÍ: Usamos 'entrypoint' para anular el comando 'dbt' por defecto
+    entrypoint: ["tail", "-f", "/dev/null"]
 
 volumes:
   postgres_data:
