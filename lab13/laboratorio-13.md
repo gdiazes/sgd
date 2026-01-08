@@ -46,11 +46,13 @@ El pipeline de datos de "FrutiFresh" que construiste en la Semana 11 está funci
 
 #### **Fase 2: Enriqueciendo los Metadatos "Como Código" (~60 min)**
 
-Ahora, vamos a darle "contexto de negocio" a nuestro proyecto `dbt` editando el archivo `schema.yml`.
+Ahora, vamos a darle "contexto de negocio" a nuestro proyecto `lab11-dbt` editando el archivo `schema.yml`.
 
 1.  **Abre el Archivo `schema.yml`:**
-    *   **Acción:** Navega a la carpeta `models` dentro de tu proyecto `dbt` y abre el archivo `schema.yml` con tu editor de texto preferido (como VS Code).
-
+    *   **Acción:** Navega a la carpeta `models` dentro de tu proyecto `lab11-dbt` y abre el archivo `schema.yml` con tu editor de texto preferido (como VS Code).
+    ```bash
+      vi /home/master/lab11-dbt/models
+ ```
 2.  **Añade Descripciones a las Fuentes:**
     *   **Explicación:** Vamos a documentar de dónde vienen nuestros datos crudos.
     *   **Acción:** Modifica la sección `sources` para que se vea así. Presta mucha atención a la indentación.
