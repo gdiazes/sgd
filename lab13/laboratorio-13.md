@@ -34,6 +34,10 @@ El pipeline de datos de "FrutiFresh" que construiste en la Semana 11 está funci
     *   **Explicación:** `dbt docs generate` necesita conectarse a la base de datos para obtener metadatos técnicos (como los tipos de datos de las columnas). Por lo tanto, nuestro contenedor de PostgreSQL debe estar en ejecución.
     *   **Acción:** Ejecuta el siguiente comando para iniciar solo el servicio de la base de datos en segundo plano.
         ```bash
+        sudo apt-get update
+        sudo apt-get install --reinstall ca-certificates
+        sudo update-ca-certificates
+        sudo systemctl restart docker
         docker compose up -d postgres_db
         ```
     *   **Verificación:** Ejecuta `docker ps` para confirmar que el contenedor `dbt-postgres` está corriendo.
