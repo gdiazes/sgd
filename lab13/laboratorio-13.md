@@ -57,55 +57,52 @@ Ahora, vamos a darle "contexto de negocio" a nuestro proyecto `lab11-dbt` editan
     *   **Explicación:** Vamos a documentar de dónde vienen nuestros datos crudos.
     *   **Acción:** Modifica la sección `sources` para que se vea así. Presta mucha atención a la indentación.
 
-    ```yaml
-    sources:
-      - name: public
-        schema: public
-        description: "Datos crudos cargados desde el sistema de punto de venta (POS)."
-        tables:
-          - name: raw_customers
-            description: "Tabla de clientes sin procesar, tal como se registra en la app."
-          - name: raw_sales
-            description: "Tabla de transacciones de ventas sin procesar."
-    ```
+  ```bash
+version: 2
 
-3.  **Añade Descripciones y Etiquetas a los Modelos:**
-    *   **Explicación:** Ahora documentaremos nuestros modelos de staging, explicando su propósito y añadiendo etiquetas para poder seleccionarlos más fácilmente en el futuro.
-    *   **Acción:** Modifica la sección `models` en tu `schema.yml`.
+sources:
+     - name: public
+       schema: public
+       description: "Datos crudos cargados desde el sistema de punto de venta (POS)."
+       tables:
+         - name: raw_customers
+           description: "Tabla de clientes sin procesar, tal como se registra en la app."
+         - name: raw_sales
+           description: "Tabla de transacciones de ventas sin procesar."
 
-    ```yaml
-    models:
-      - name: stg_customers
-        description: "Modelo de Staging: Limpia y estandariza la tabla de clientes. Cada fila representa un cliente único. Los clientes con IDs duplicados o status inválidos han sido filtrados en esta etapa (aunque la prueba los detectará en el origen)."
-        tags: ['staging', 'clientes']
-        columns:
-          - name: id_cliente
-            description: "La clave primaria (PK) del cliente."
-            tests:
-              - unique
-              - not_null
-          - name: status_cliente
-            description: "El estado actual del cliente. Valores permitidos: ['activo', 'inactivo', 'potencial']."
-            tests:
-              - accepted_values:
-                  values: ['activo', 'inactivo', 'potencial']
+models:
+     - name: stg_customers
+       description: "Modelo de Staging: Limpia y estandariza la tabla de clientes. Cada fila representa un cliente único. Los clientes con IDs duplicados o status inválidos han sido filtrados en esta etapa (aunque la prueba los detectará en el origen)."
+       tags: ['staging', 'clientes']
+       columns:
+         - name: id_cliente
+           description: "La clave primaria (PK) del cliente."
+           tests:
+             - unique
+             - not_null
+         - name: status_cliente
+           description: "El estado actual del cliente. Valores permitidos: ['activo', 'inactivo', 'potencial']."
+           tests:
+             - accepted_values:
+                 values: ['activo', 'inactivo', 'potencial']
 
-      - name: stg_sales
-        description: "Modelo de Staging: Limpia la tabla de ventas. Filtra ventas que no tienen un cliente válido."
-        tags: ['staging', 'ventas']
-        columns:
-          - name: id_transaccion
-            description: "La clave primaria (PK) de la transacción."
-            tests:
-              - unique
-              - not_null
-          - name: id_cliente
-            description: "La clave foránea (FK) que se relaciona con stg_customers.id_cliente."
-            tests:
-              - not_null
-              - relationships:
-                  to: ref('stg_customers')
-                  field: id_cliente
+     - name: stg_sales
+       description: "Modelo de Staging: Limpia la tabla de ventas. Filtra ventas que no tienen un cliente válido."
+       tags: ['staging', 'ventas']
+       columns:
+         - name: id_transaccion
+           description: "La clave primaria (PK) de la transacción."
+           tests:
+             - unique
+             - not_null
+         - name: id_cliente
+           description: "La clave foránea (FK) que se relaciona con stg_customers.id_cliente."
+           tests:
+             - not_null
+             - relationships:
+                 to: ref('stg_customers')
+                 field: id_cliente
+
     ```
 
 4.  **Guarda el archivo `schema.yml`**.
