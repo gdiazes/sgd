@@ -51,7 +51,7 @@ Ahora, vamos a darle "contexto de negocio" a nuestro proyecto `lab11-dbt` editan
 1.  **Abre el Archivo `schema.yml`:**
     *   **Acción:** Navega a la carpeta `models` dentro de tu proyecto `lab11-dbt` y abre el archivo `schema.yml` con tu editor de texto preferido (como VS Code).
     ```bash
-      vi /home/master/lab11-dbt/models
+      vi /home/master/lab11-dbt/models/schema.yml
  ```
 2.  **Añade Descripciones a las Fuentes:**
     *   **Explicación:** Vamos a documentar de dónde vienen nuestros datos crudos.
