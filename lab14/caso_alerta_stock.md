@@ -7,7 +7,7 @@
 ---
 
 ## 1. El Escenario (Contexto del Proyecto)
-La empresa "ModaFast" tiene **50 tiendas**. Cada gerente reporta sus ventas y stock diariamente en archivos aislados (simulados). La dirección necesita un **Dashboard Centralizado** que se actualice automáticamente, limpie los errores humanos y prediga roturas de stock.
+La empresa "ModaFast" tiene **50 tiendas**. Cada gerente reporta sus ventas y stock diariamente en archivos aislados (simulados). La dirección necesita un **Dashboard Centralizado** que se actualice automáticamente, limpie los errores humanos y prediga roturas de **stock**.
 
 ### El Equipo Scrum (Roles Adaptados)
 1.  **Ana (Product Owner):** Define las reglas de negocio (ej. "¿Qué hacemos con ventas negativas?"). Valida el Dashboard final.
